@@ -31,7 +31,7 @@ class App extends Component {
       (acc, value) => acc + value,
       0,
     );
-    const PositivePercentage = (this.state.good / total) * 100;
+    const PositivePercentage = Math.floor((this.state.good / total) * 100);
 
     return PositivePercentage;
   };
