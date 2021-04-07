@@ -37,8 +37,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state);
-
     return (
       <>
         <Section title="Please leave feedback">
@@ -46,6 +44,7 @@ class App extends Component {
         </Section>
         <Section title="Statistics">
           <Statistics
+            message="No feedback given"
             options={this.state}
             total={this.countTotalFeedback}
             percentage={this.countPositiveFeedbackPercentage}

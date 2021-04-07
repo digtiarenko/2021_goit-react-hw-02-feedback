@@ -1,6 +1,6 @@
 import shortid from 'shortid';
 import styles from './FeedbackOptions.module.css';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const FeedbackOptions = ({ options, onLikes }) => {
   return (
@@ -20,6 +20,15 @@ const FeedbackOptions = ({ options, onLikes }) => {
       })}
     </div>
   );
+};
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  }),
+  onLikes: PropTypes.func.isRequired,
 };
 
 export default FeedbackOptions;
